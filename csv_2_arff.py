@@ -58,9 +58,10 @@ Reduced_data = data.drop(columns=['cat_attr_val'])
 Array_df = Reduced_data[["num_attr_name", "samples", "num_attr_val"]]
 Array_df = Array_df.drop_duplicates()
 
-Array_of_data= Array_df.pivot(index = 'samples',
-                                 columns = 'num_attr_name',
-                                 values = 'num_attr_val')
+Array_of_data= Array_df.pivot_table(index = 'samples',
+                                    columns = 'num_attr_name',
+                                    values = 'num_attr_val',
+                                    fill_value=0)
 
 # Get matching phenotype for the different genome ids:
 cata_attr_val = data.drop(columns=['num_attr_name', 'num_attr_val']) #catagorical variable 
