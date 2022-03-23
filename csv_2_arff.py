@@ -93,4 +93,5 @@ att_out.write('@ATTRIBUTE ' + name + '		{Susceptible, Resistant}\n')
 att_out.write('@DATA\n')
 # Write the array data to the bottom of the file and close the file:
 att_out.write(array_data_sep)
+att_out.write('\n')
 att_out.close()
