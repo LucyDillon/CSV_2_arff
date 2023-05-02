@@ -15,6 +15,6 @@ It you would like to use in a for loop: (using example headings)
 
 ``` 
 for i in *RGI_specific_genes.csv; do 
-	python Universal_csv_2_arff.py -csv $i  -rel Gene -sample genome_id -n_attr_name Gene -n_attr_value GeneHit -c_attr_value add_phenotype -c_attr_name add_phenotype -o $i.arff; 
+	python csv_2_arff.py -csv $i  -rel Gene -sample genome_id -n_attr_name Gene -n_attr_value GeneHit -c_attr_value add_phenotype -c_attr_name add_phenotype -o $i.arff; 
 done 
   
