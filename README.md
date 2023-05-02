@@ -12,7 +12,9 @@ If your column names have spaces between words e.g. "My column" put quotation ma
 If there are duplicates of the same sample and numeric/catagorical attributes the tool may produce errors and not run. To avoid this just remove duplicate lines in file.
 
 It you would like to use in a for loop: (using example headings)
-``` for i in *RGI_specific_genes.csv; do 
+
+``` 
+for i in *RGI_specific_genes.csv; do 
 	python Universal_csv_2_arff.py -csv $i  -rel Gene -sample genome_id -n_attr_name Gene -n_attr_value GeneHit -c_attr_value add_phenotype -c_attr_name add_phenotype -o $i.arff; 
 	done 
   
