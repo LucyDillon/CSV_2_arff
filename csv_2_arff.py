@@ -32,7 +32,7 @@ if __name__ == "__main__":
     parser.add_argument('-category2', action='store', dest='category2', 
                         help='Category 2 e.g. Resistant', required=True) 
     parser.add_argument('-category3', action='store', dest='category3', 
-                        help='Category 3 e.g. Intermediate', required=False
+                        help='Category 3 e.g. Intermediate', required=False)
 
 options = parser.parse_args()
 
@@ -95,7 +95,7 @@ att_out.write('@RELATION    ' + i +'\n')
 for j in num_attr_name:  
     att_out.write("@ATTRIBUTE " + i + "-" + j + "    REAL\n")
 name = options.cat_attr_name
-att_out.write('@ATTRIBUTE ' + name + '		{' + option.category1 + ', ' + option.category2 + '}\n')
+att_out.write('@ATTRIBUTE ' + name + '		{' + options.category1 + ', ' + options.category2 + '}\n')
 att_out.write('@DATA\n')
 # Write the array data to the bottom of the file and close the file:
 att_out.write(array_data_sep)
